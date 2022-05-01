@@ -1,0 +1,19 @@
+\section{Solver Configuration} 
+\label{sec:Solver}
+
+The solver chosen to solve the flow physics is Ansys Fluent which uses a finite volume methodology for solving the flow physics, The solver details and inputs are listed below
+\begin{itemize}
+  \item Solver: Unsteady Reynolds Averaged Navier Stokes
+
+  \item 2D Space and axis type: Axisymmetric Boundary
+  \item Turbulence Model: K-\(\omega\)-Shear Stress Transport Model [5]
+  \item Fluid: Ideal Gas
+  \item Viscosity Model: Sutherland Three Temperature model
+     \item Implicit time Formulation
+  \item Inviscid Flux Formulation: AUSM [6]
+  \item Viscous Flux Formulation: Green Gauss Method
+  \item Kinetic Energy: Second Order Upwinding Schemes
+  \item Specific Dissipation Rate: Second order Upwinding schemes
+  \item CFL number was maintained with 1-5 with CFL adaptation
+  \item Time steps: 4000, Step Size \(10^{-6}\)
+\end{itemize}
